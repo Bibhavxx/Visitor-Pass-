@@ -4,7 +4,7 @@ A web-based application developed using **ASP.NET MVC** that enables organizatio
 
 ---
 
-## 🚀 Features
+## # Features
 
 -  **Role Selection Dropdown**  
   Choose between *Visitor* or *Delegator* using a simple dropdown menu.
@@ -22,7 +22,7 @@ A web-based application developed using **ASP.NET MVC** that enables organizatio
 
 ---
 
-## 🛠️ Technologies Used
+## # Technologies Used
 
 - ASP.NET MVC (Model-View-Controller)
 - C#  
