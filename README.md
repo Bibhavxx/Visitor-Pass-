@@ -6,19 +6,19 @@ A web-based application developed using **ASP.NET MVC** that enables organizatio
 
 ## 🚀 Features
 
-- 🔽 **Role Selection Dropdown**  
+-  **Role Selection Dropdown**  
   Choose between *Visitor* or *Delegator* using a simple dropdown menu.
 
-- 📝 **Dynamic Form Input**  
+-  **Dynamic Form Input**  
   Enter Name, Email, and Designation to generate the pass.
 
-- 🧾 **Auto Pass Generation**  
+-  **Auto Pass Generation**  
   Automatically generates a visitor pass upon form submission.
 
-- 🕒 **Timestamp Recording**  
+-  **Timestamp Recording**  
   Records the date and time of entry.
 
-- 📄 **(Optional)** QR Code or Print-ready Pass (if implemented)
+-  **(Optional)** QR Code or Print-ready Pass (if implemented)
 
 ---
 
