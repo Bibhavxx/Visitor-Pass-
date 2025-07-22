@@ -1,0 +1,100 @@
+﻿@{
+    ViewBag.Title = "I-Card";
+}
+
+<style>
+    body {
+        background: #f0f4f8;
+        font-family: 'Segoe UI', sans-serif;
+    }
+
+    .print-btn-top {
+        text-align: center;
+        margin: 30px auto 20px;
+    }
+
+        .print-btn-top button {
+            background-color: #007bff;
+            color: white;
+            padding: 10px 20px;
+            font-size: 15px;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+            transition: background-color 0.3s ease;
+        }
+
+            .print-btn-top button:hover {
+                background-color: #0056b3;
+            }
+
+    .icard-container {
+        max-width: 350px;
+        margin: auto;
+        padding: 25px;
+        border-radius: 16px;
+        background-color: #ffffff;
+        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+        text-align: center;
+       
+    }
+
+    .icard-header {
+        font-size: 20px;
+        font-weight: bold;
+        color: lightblue;
+        margin-bottom: 15px;
+    }
+
+    .icard-details p {
+        margin: 10px 0;
+        font-size: 16px;
+        color: #333;
+    }
+
+    .qr-section {
+        margin-top: 20px;
+    }
+
+        .qr-section img {
+            width: 120px;
+            height: 120px;
+        }
+
+    .icard-footer {
+        font-size: 13px;
+        color: #666;
+        margin-top: 20px;
+        border-top: 1px dashed #ccc;
+        padding-top: 10px;
+    }
+</style>
+
+<!-- ✅ Print Button at Top -->
+<div class="print-btn-top">
+    <button onclick="window.print()">🖨️ Print I-Card</button>
+</div>
+
+<!-- ✅ I-Card -->
+<div class="icard-container">
+    <div class="icard-header">
+        🎫 TATA STEEL - Event Pass
+    </div>
+
+    <div class="icard-details">
+        <p><strong>Name:</strong> @ViewBag.Name</p>
+        <p><strong>Email:</strong> @ViewBag.Email</p>
+        <p><strong>Role:</strong> @ViewBag.Role</p>
+    </div>
+
+    <div class="qr-section">
+        <img src="@ViewBag.QRCodeImage" alt="QR Code" />
+        <p style="font-size: 12px; color: #888;">Scan for attendee info</p>
+    </div>
+
+    <div class="icard-footer">
+        Please show this badge at the event entry gate.
+    </div>
+</div>
+

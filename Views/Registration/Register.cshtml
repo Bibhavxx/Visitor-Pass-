@@ -1,0 +1,81 @@
+﻿@model EventPassGenerator.Models.Attendee
+
+@{
+    ViewBag.Title = "Register";
+}
+
+<style>
+    body {
+        background: #fff9c4;
+        font-family: 'Segoe UI', sans-serif;
+    }
+
+    .form-container {
+        max-width: 400px;
+        margin: 60px auto;
+        background-color: #e0f7fa;
+        padding: 30px 40px;
+        border-radius: 12px;
+        box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+    }
+
+    h2 {
+        text-align: center;
+        margin-bottom: 25px;
+        color: navy;
+    }
+
+    label {
+        display: block;
+        margin-bottom: 8px;
+        font-weight: 600;
+        color: #333;
+    }
+
+    input, select {
+        width: 100%;
+        padding: 10px 12px;
+        margin-bottom: 20px;
+        border: 1px solid #ccc;
+        border-radius: 8px;
+        font-size: 15px;
+    }
+
+    button {
+        width: 100%;
+        background-color: navy;
+        color: white;
+        border: none;
+        padding: 12px;
+        border-radius: 8px;
+        font-size: 16px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+    }
+
+        button:hover {
+            background-color: darkred;
+        }
+</style>
+
+<div class="form-container">
+    <h2>🎫 Event Registration</h2>
+
+    <form asp-action="Register" method="post">
+        <label for="Name">👤 Full Name</label>
+        <input asp-for="Name" placeholder="Enter your name" required />
+
+        <label for="Email">📧 Email Address</label>
+        <input asp-for="Email" type="email" placeholder="Enter your email" required />
+
+        <label for="Role">🧾 Select Role</label>
+        <select asp-for="Role" required>
+            <option value="">-- Select Role --</option>
+            <option value="Visitor">Visitor</option>
+            <option value="Delegator">Delegator</option>
+        </select>
+
+        <button type="submit">✅ Register</button>
+    </form>
+</div>
+
